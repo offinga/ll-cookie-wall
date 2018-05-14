@@ -10,6 +10,7 @@ if( !empty( $cookie_wall_options ) && isset( $cookie_wall_options['description']
 	$tracking_code      = $cookie_wall_options['tracking_code'];
 	$logo_url           = $cookie_wall_options['logo'];
 	$blurry_background  = $cookie_wall_options['blurry_background'];
+	$background_size_cover  = $cookie_wall_options['background_size_cover'];
 	$background_image_url = $cookie_wall_options['image_url'];
 	$custom_css 				= $cookie_wall_options['custom_css'];
 ?>
@@ -40,6 +41,10 @@ if( !empty( $cookie_wall_options ) && isset( $cookie_wall_options['description']
 					-o-filter: blur(5px);
 					-ms-filter: blur(5px);
 					filter: blur(5px);
+				<?php } //end if
+
+				if( intval( $background_size_cover ) ) { ?>
+					background-size: cover;
 				<?php } //end if ?>
 			}
 

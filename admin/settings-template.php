@@ -20,6 +20,7 @@ $tracking_code          = '';
 $custom_css         		= '';
 $server_software        = '';
 $blurry_background      = '';
+$background_size_cover  = '';
 
 $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'settings';
 
@@ -65,6 +66,9 @@ if( isset( $cookie_wall_options['custom_css'] ) ) {
 }
 if( isset( $cookie_wall_options['blurry_background'] ) ) {
 	$blurry_background = $cookie_wall_options['blurry_background'];
+}
+if( isset( $cookie_wall_options['background_size_cover'] ) ) {
+	$background_size_cover = $cookie_wall_options['background_size_cover'];
 }
 
 wp_enqueue_script('jquery');

@@ -93,6 +93,15 @@
         </tr>
         <tr>
             <th scope="row">
+                <label for="background_cover"><?php echo esc_html__( "Background size cover", 'll-cookie-wall' ) ?></label>
+            </th>
+            <td>
+                <input id="background_cover" type="checkbox" <?php if( $background_size_cover == '1' ) { echo "checked"; } ?> name="llcw_background_size_cover" value="1" />
+                <span class="description" ><?php echo esc_html__( "Enable to make sure the background image covers the entire background of the page", 'll-cookie-wall' ) ?></span>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
                 <input class="button button-primary" type="submit" name="llcw_submit" value="<?php esc_attr_e('Save Changes', 'll-cookie-wall'); ?>" />
                 <span class="description">* <?php echo __('Required', 'll-cookie-wall'); ?></span>
 

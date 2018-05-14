@@ -73,6 +73,11 @@ class Admin_Cookie_Wall {
 		} else {
 			$settings['blurry_background'] = '0';
 		}
+		if( isset( $_POST['llcw_background_size_cover'] ) ) {
+			$settings['background_size_cover'] = '1';
+		} else {
+			$settings['background_size_cover'] = '0';
+		}
 
 		return update_option( 'llcw_settings', $settings );
 	}
